@@ -13,8 +13,9 @@ body {
     --secondary-text-color: #5c5c62;
     --durability-text-color: #6a737d9c;
     --icon-color: #6a737d;
-    --border-color: #ff9a0045;
-    --text-decoration-color: #ff9a00;
+    --border-color: #004d25;
+    --box-shadow: #11823b;
+    --text-decoration-color: #004d25;
 }
 
 .container {
@@ -35,10 +36,23 @@ body {
     justify-content: space-between;
 }
 
+.ft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.fc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .resume {
     margin: 50px auto;
-    border: 1px solid #f5f5f5;
-    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    border: 10px solid var(--border-color);
+    box-shadow: 0px 3px 15px 0px var(--box-shadow);
     padding: 30px 0;
     max-width: 900px;
 }
@@ -89,8 +103,12 @@ body {
 
 .contact-info__block {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.contact-info__block:last-child {
+    padding-bottom: 0;
 }
 
 .contact-info__block--center {
@@ -169,6 +187,12 @@ body {
 .skills__text {
     color: var(--secondary-text-color);
     text-align: justify;
+}
+
+.life-timeline {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Experience and additonal info styles */
@@ -264,4 +288,54 @@ body {
 
 .additional-info__languages-item {
     color: var(--secondary-text-color);
+}
+
+/* The Timeline */
+.timeline {
+    flex: 1 1 60%;
+    margin-right: 50px;
+}
+
+.timeline__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.timeline__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.timeline__life-header-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.timeline__life-header-name {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.timeline__life-project {
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.timeline__life-project-responsibilities {
+    color: var(--secondary-text-color);
+    padding-left: 20px;
+}
+
+/* The Like Hates */
+.like-hates__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;   
 }
